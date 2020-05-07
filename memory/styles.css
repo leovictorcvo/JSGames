@@ -13,21 +13,25 @@ body {
   justify-content: center;
 }
 
+h1 {
+  font-size: 3em;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
-  height: 15em;
-  width: 20em;
+  height: 25em;
+  width: 30em;
   margin: 1em;
 }
 
 img[class^="card"] {
-  height: 5em;
-  min-height: 5em;
-  max-height: 5em;
-  width: 5em;
-  min-width: 5em;
-  max-width: 5em;
+  height: 7em;
+  min-height: 7em;
+  max-height: 7em;
+  width: 7em;
+  min-width: 7em;
+  max-width: 7em;
   padding: 10px;
   box-sizing: border-box;
 }
@@ -35,8 +39,9 @@ img[class^="card"] {
 button {
   background-color: blue;
   color: white;
-  padding: 15px;
+  padding: 1em 2em;
   border: 0;
   border-radius: 8px;
   margin-top: 1em;
+  font-size: 1.8em;
 }

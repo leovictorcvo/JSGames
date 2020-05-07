@@ -2,28 +2,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const availableCards = [
     {
       name: "Fries",
-      img: "fries.svg"
+      img: "fries.svg",
     },
     {
       name: "Cheeseburger",
-      img: "cheeseburger.svg"
+      img: "cheeseburger.svg",
     },
     {
       name: "Hotdog",
-      img: "hotdog.svg"
+      img: "hotdog.svg",
     },
     {
       name: "Ice-cream",
-      img: "icecream.svg"
+      img: "icecream.svg",
     },
     {
       name: "Milkshake",
-      img: "milkshake.svg"
+      img: "milkshake.svg",
     },
     {
       name: "Pizza",
-      img: "pizza.svg"
-    }
+      img: "pizza.svg",
+    },
   ];
 
   const cards = [];
@@ -37,13 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const cardId = this.getAttribute("data-id");
     cardsChosenId.push(cardId);
-    this.setAttribute("src", `/images/${cards[cardId].img}`);
+    this.setAttribute("alt", cards[cardId].name);
+    this.setAttribute("src", `images/${cards[cardId].img}`);
     if (cardsChosenId.length === 2) {
       setTimeout(checkIfCardsMatch, 500);
     }
   }
 
-  const updateMatches = qty => {
+  const updateMatches = (qty) => {
     matches = qty;
     if (matches === availableCards.length) {
       document.getElementById("restart").style.display = "block";
@@ -57,12 +58,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const setCardOk = card => {
-    card.setAttribute("src", "/images/ok.svg");
+  const setCardOk = (card) => {
+    card.setAttribute("src", "images/ok.svg");
   };
 
-  const flipCardBack = card => {
-    card.setAttribute("src", "/images/question.svg");
+  const flipCardBack = (card) => {
+    card.setAttribute("alt", "question");
+    card.setAttribute("src", "images/question.svg");
     card.addEventListener("click", flipCard);
   };
 
@@ -80,11 +82,11 @@ document.addEventListener("DOMContentLoaded", () => {
     cardsChosenId.splice(0, 2);
   };
 
-  const createCard = id => {
+  const createCard = (id) => {
     const card = document.createElement("img");
     card.setAttribute("data-id", id);
-    card.setAttribute("alt", cards[id].name);
-    card.setAttribute("src", "/images/question.svg");
+    card.setAttribute("alt", "question");
+    card.setAttribute("src", "images/question.svg");
     card.classList.add(`card-${id}`);
     card.addEventListener("click", flipCard);
     return card;
@@ -93,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const suffleCards = () => {
     cards.length = 0;
 
-    availableCards.forEach(card => {
+    availableCards.forEach((card) => {
       cards.push(card);
       cards.push(card);
     });
@@ -104,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const createBoard = () => {
     updateMatches(0);
     suffleCards();
-    grid.querySelectorAll("*").forEach(n => n.remove());
+    grid.querySelectorAll("*").forEach((n) => n.remove());
     for (let i = 0; i < cards.length; i++) {
       grid.appendChild(createCard(i));
     }
