@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #252121;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  max-width: 960px;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 5em;
+}
+
+.description {
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #ff9900;
+}
+
+.game-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4em;
+}
+
+.score {
+  text-align: center;
+}
+
+.score__title {
+  font-size: 3em;
+}
+
+.score__value {
+  font-size: 7em;
+  color: #f9d297;
+}
+
+.game-board {
+  height: 580px; /* 8 rows of candies 8 * 70 = 560 */
+  width: 580px; /* 8 columns of candies. 8 * 70 = 560 */
+  background-color: #6d7f9780;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px #fff inset, 0 1px 0 #00000080;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.candy {
+  height: 70px;
+  width: 70px;
+}
