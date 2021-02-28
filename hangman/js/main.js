@@ -119,9 +119,10 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const createGame = () => {
-    restartButton.style.display = "none";
-    resultText.innerHTML = "";
-    clearTips();
+    // restartButton.style.display = "none";
+        resultText.innerHTML = "Oh no!!! Try again!!!";
+        // resultText.innerHTML = "";
+    // clearTips();
 
     correctGuess = 0;
     incorrectGuess = 0;
