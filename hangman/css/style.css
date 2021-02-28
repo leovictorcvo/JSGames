@@ -35,6 +35,11 @@ img {
   cursor: not-allowed;
 }
 
+.header {
+  text-align: center;
+  margin: 1em auto;
+}
+
 .incorrect-guess {
   background: #6c6c6c;
   color: white;
