@@ -4,6 +4,7 @@ Simple games build using only vanilla JS, HTML and CSS
 
 - [Memory](./memory)
 - [Candy Crush](./candy)
+- [Smart bird - Flappy bird answering simple math questions](./smart-bird)
 
 ---
 
