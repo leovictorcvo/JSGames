@@ -6,6 +6,8 @@ Simple games build using only vanilla JS, HTML and CSS
 - [Candy Crush](./candy)
 - [Smart bird - Flappy bird answering simple math questions](./smart-bird)
 
+Another games developed to my wife
+- [Elisa Porto de Carvalho](https://elisapcarvalho.github.io/bom-comeco-leme/)
 ---
 
 <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/leovictorcvo/JSGames?color=yellow">
